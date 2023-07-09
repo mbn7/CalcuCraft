@@ -1,5 +1,5 @@
-Calculator
-A simple calculator application built using vanilla JavaScript and HTML.
+# CalcuCraft
+Intuitive calculator built from scratch using only pure JavaScript, HTML, and CSS.
 
 Features
 * Basic arithmetic operations: addition, subtraction, multiplication, division.

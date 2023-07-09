@@ -1,0 +1,204 @@
+html {
+    background: #100a1c;
+    background-image:
+        radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0, 0, 0, 0) 100%),
+        radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+    color: #6cacc5;
+    background-attachment: fixed;
+}
+
+body {
+    color: #6cacc5;
+    font: 300 18px/1.6 "Source Sans Pro", sans-serif;
+    margin: 0;
+    padding: 5em 0 2em;
+    text-align: center;
+}
+
+.divReuse {
+    background-color: rgba(191, 125, 253, 0.055);
+    display: block;
+    cursor: pointer;
+}
+
+.divReuse:hover {
+    background-color: rgba(125, 253, 157, 0.158);
+}
+
+#popupHistoryBox {
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    display: none;
+    width: 293px;
+    height: auto;
+    max-height: 280px;
+    background-color: #274753;
+    border: solid 2px rgb(72, 72, 177);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: justify;
+    padding-left: 5px;
+    padding-right: 5px;
+    z-index: 99;
+}
+
+#history .material-icons {
+    pointer-events: none;
+}
+
+#popupHistoryBox::-webkit-scrollbar {
+    width: 4px;
+}
+
+#popupHistoryBox::-webkit-scrollbar-thumb {
+    background: #257bdd91 0% 0% no-repeat padding-box;
+    opacity: 0.3;
+}
+
+#popupHistoryText {
+    font-size: 15px;
+}
+
+#settingsHistory {
+    position: sticky;
+    top: -2px;
+    left: 0px;
+    padding-top: 7px;
+    padding-left: 150px;
+    height: 5px;
+    background-color: #274753;
+}
+
+#exitPopupHistory {
+    position: relative;
+    left: 60px;
+    cursor: pointer;
+    color: rgba(141, 66, 66, 0.664);
+    font-weight: 700;
+}
+
+#exitPopupHistory:hover {
+    color: darkgreen;
+}
+
+#clearHistory {
+    position: relative;
+    top: 2px;
+    left: -125px;
+    cursor: pointer;
+}
+
+#clearHistory:hover {
+    background-color: brown;
+    color: cornsilk;
+}
+
+.calculator {
+    position: relative;
+    top: -40px;
+    font-size: 28px;
+    margin: 0 auto;
+    width: 10em;
+}
+
+.resultCal {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    color: #c97874;
+    float: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 7.5em;
+    height: 3em;
+    height: 100px;
+    animation: setResult 0.5s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes setResult {
+    from {
+        top: 80px
+    }
+
+    to {
+        top: 30px
+    }
+}
+
+#currentCal {
+    position: relative;
+    display: flex;
+    text-align: right;
+    width: 270;
+    top: 80px;
+    left: 40px;
+    opacity: 0.6;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+    align-content: flex-start;
+    z-index: -1;
+}
+
+#erase .material-icons {
+    pointer-events: none;
+}
+
+#btnArea {
+    position: relative;
+    display: inline-block;
+    top: 100px;
+    height: 325px;
+    width: 340px;
+}
+
+button {
+    border: 0;
+    background: rgba(42, 50, 113, .28);
+    color: #6cacc5;
+    cursor: pointer;
+    float: left;
+    font: inherit;
+    margin: 0.25em;
+    width: 2em;
+    height: 2em;
+    transition: all 0.1s;
+}
+
+button:hover:not(.operatorBtn, .equals, #erase, #C) {
+    border: solid 2px rgb(0, 225, 255);
+}
+
+.operatorBtn:hover {
+    border: solid 2px rgb(47, 75, 255)
+}
+
+.equals:hover {
+    border: solid 2px greenyellow
+}
+
+#erase:hover {
+    border: solid 2px rgb(248, 143, 6)
+}
+
+#C:hover {
+    border: solid 2px rgb(255, 61, 47)
+}
+
+@media (min-width: 420px) {
+    .calculator {
+        width: 12em;
+    }
+
+    .resultCal {
+        width: 8.5em;
+    }
+
+    button {
+        margin: 0.5em;
+    }
+}

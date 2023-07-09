@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html dir="ltr">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/calculator.css">
+    <title>CalcuCraft</title>
+</head>
+<body>
+    <section id="calculator" class="calculator">
+        <div id="popupHistoryBox">
+            <span id="settingsHistory">
+                <span id="clearHistory"><i class="material-icons">&#xe872;</i></span>
+                <span id="exitPopupHistory">X</span>
+            </span>
+            <div id="popupHistoryText"></div>
+        </div>
+        <div id="resultCal" class="resultCal"> </div>
+        <div id="currentCal">0</div>
+        <div id="btnArea">
+            <button id="clear">C</button>
+            <button id="erase" class="operatorBtn"><i class="material-icons">&#xe14a;</i></button>
+            <button id="%" class="operatorBtn">%</button>
+            <button id="/" class="operatorBtn">/</button>
+            <br />
+            <button id="7" class="numberBtn">7</button>
+            <button id="8" class="numberBtn">8</button>
+            <button id="9" class="numberBtn">9</button>
+            <button id="*" class="operatorBtn">*</button>
+            <br />
+            <button id="4" class="numberBtn">4</button>
+            <button id="5" class="numberBtn">5</button>
+            <button id="6" class="numberBtn">6</button>
+            <button id="-" class="operatorBtn">-</button>
+            <br />
+            <button id="1" class="numberBtn">1</button>
+            <button id="2" class="numberBtn">2</button>
+            <button id="3" class="numberBtn">3</button>
+            <button id="+" class="operatorBtn">+</button>
+            <br />
+            <button id="history">
+                <i class="material-icons" aria-label="Open History">&#xe889;</i>
+            </button>
+            <button id="0" class="numberBtn">0</button>
+            <button id="." class="numberBtn">.</button>
+            <button id="=" class="equals">=</button>
+        </div>
+    </section>
+
+    <script type="module" src="./src/setup.js" defer></script>
+    <script type="module" src="./src/calculationUtils.js" defer></script>
+    <script type="module" src="./src/historyManager.js" defer></script>
+    <script type="module" src="./src/eventHandlers.js" defer></script>
+    <script type="module" src="./src/domUtils.js" defer></script>
+</body>
